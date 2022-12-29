@@ -58,7 +58,7 @@
 
                     function onDrawFrame(timestamp, xrFrame){
                         xrSession.requestAnimationFrame(onDrawFrame);
-                        const pose = xrFrame.getViewPose(referenceSpace);
+                        const pose = xrFrame.getViewerPose(referenceSpace);
 
                         gl.bindFramebuffer(gl.FRAMEBUFFER, xrWebGLLayer.framebuffer);
                         if (!!pose) return;
