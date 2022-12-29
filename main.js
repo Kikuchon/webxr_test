@@ -16,7 +16,7 @@ const $button = document.getElementById('startButton');
         
         const xrSession = await navigator.xr.requestSession('immersive-ar');
         
-        const renderer = new THREE.WebGLRenderer({canvas: xrCanvas});
+        const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('#xrCanvas')});
         renderer.autoClear = false;
         renderer.setSize(width,height);
 
