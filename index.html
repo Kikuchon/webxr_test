@@ -61,7 +61,7 @@
                         const pose = xrFrame.getViewerPose(referenceSpace);
 
                         gl.bindFramebuffer(gl.FRAMEBUFFER, xrWebGLLayer.framebuffer);
-                        if (!!pose) return;
+                        if (!pose) return;
 
                         pose.views.forEach((view)=>{
                             const viewport = xrWebGLLayer.getViewport(view);
