@@ -28,8 +28,8 @@ const $button = document.getElementById('startButton');
         scene.add(new THREE.GridHelper(100,100));
 
         const box = new THREE.Mesh(
-            // new THREE.BoxBufferGeometry(.2,.2,.2),
-            new THREE.BoxGeometry(.2,.2,.2),
+            new THREE.BoxBufferGeometry(1,1,1),
+            //new THREE.BoxGeometry(.2,.2,.2),
             new THREE.MeshNormalMaterial()
         );
         scene.add(box);
