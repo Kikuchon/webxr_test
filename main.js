@@ -20,8 +20,8 @@ const $button = document.getElementById('startButton');
         renderer.autoClear = false;
         renderer.setSize(width,height);
 
-        // const gl = renderer.getContext();
-        const gl = renderer.getContext('webgl2');
+        const gl = renderer.getContext();
+        // const gl = renderer.getContext('webgl2');
 
         var extensions = new THREE.WebGLExtensions(gl);
         extensions.get("EXT_frag_depth");
