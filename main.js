@@ -23,10 +23,10 @@ const $button = document.getElementById('startButton');
         // const gl = renderer.getContext();
         const gl = renderer.getContext('webgl2');
 
-        // var extensions = new THREE.WebGLExtensions(gl);
-        // extensions.get("EXT_frag_depth");
-        // extensions.get("WEBGL_draw_buffers");
-        // extensions.get("EXT_shader_texture_lod");
+        var extensions = new THREE.WebGLExtensions(gl);
+        extensions.get("EXT_frag_depth");
+        extensions.get("WEBGL_draw_buffers");
+        extensions.get("EXT_shader_texture_lod");
         
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera();
