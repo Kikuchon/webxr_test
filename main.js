@@ -27,12 +27,11 @@ const $button = document.getElementById('startButton');
 
         scene.add(new THREE.GridHelper(100,100));
 
-        const box = new THREE.Mesh(
-            new THREE.BoxBufferGeometry(1,1,1),
-            //new THREE.BoxGeometry(.2,.2,.2),
-            new THREE.MeshNormalMaterial()
+        const sphere = new THREE.Mesh(
+            new THREE.SphereGeometry(100,32,32),
+            new THREE.MeshBasicMaterial({color:0xffff00})
         );
-        scene.add(box);
+        scene.add(sphere);
         
         const xrWebGLLayer = new XRWebGLLayer(xrSession, gl);
         xrSession.updateRenderState({baseLayer: xrWebGLLayer});
