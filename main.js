@@ -53,7 +53,7 @@ const $button = document.getElementById('startButton');
 
                 camera.matrix.fromArray(view.transform.matrix);
                 camera.projectionMatrix.fromArray(view.projectionMatrix);
-                camera.updateMatrixWorld(ture);
+                camera.updateMatrixWorld(true);
 
                 renderer.clearDepth();
                 renderer.render(scene, camera);
