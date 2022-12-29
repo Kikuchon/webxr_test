@@ -20,15 +20,15 @@ const $button = document.getElementById('startButton');
         renderer.autoClear = false;
         renderer.setSize(width,height);
 
-        const gl = renderer.getContext();
-        // const gl = renderer.getContext('webgl2');
+        // const gl = renderer.getContext();
+        const gl = renderer.getContext('webgl2');
 
         var available_extensions = gl.getSupportedExtensions();
         console.log(available_extensions);
-        var extensions = new THREE.WebGLExtensions(gl);
-        extensions.get("EXT_frag_depth");
-        extensions.get("WEBGL_draw_buffers");
-        extensions.get("EXT_shader_texture_lod");
+        // var extensions = new THREE.WebGLExtensions(gl);
+        // extensions.get("EXT_frag_depth");
+        // extensions.get("WEBGL_draw_buffers");
+        // extensions.get("EXT_shader_texture_lod");
         
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera();
